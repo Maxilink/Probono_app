@@ -1,21 +1,21 @@
 # Probono Desk - Legal Aid Platform
 
-**A comprehensive SaaS platform connecting Nigerian law firms with individuals seeking free legal aid.**
+A comprehensive SaaS platform connecting Nigerian law firms with individuals seeking free legal aid.**
 
-## 🌟 Overview
+Overview
 
 Probono Desk is a production-ready web application that bridges the gap between Nigerians in need of legal assistance and law firms willing to provide pro bono services. The platform features role-based dashboards, real-time communication, case management, and administrative oversight.
 
-## 🚀 Features
+Features
 
-### **Public Website**
+Public Website**
 - Professional landing page with Nigerian context
 - Clear value proposition and how-it-works guide
 - Testimonials from Nigerian users
 - Comprehensive FAQ section
 - Mobile-responsive design
 
-### **User (Legal Aid Seeker) Features**
+User (Legal Aid Seeker) Features**
 - ✅ Account creation and authentication
 - ✅ Multi-step case submission with file uploads
 - ✅ Case status tracking (Submitted → Accepted → In Progress → Closed)
