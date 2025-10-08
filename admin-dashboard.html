@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Probono Desk</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dashboard-page admin-dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fas fa-balance-scale"></i>
+                <span>Probono Desk</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" class="nav-item active" data-section="overview">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Overview</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="firm-verification">
+                    <i class="fas fa-shield-check"></i>
+                    <span>Firm Verification</span>
+                    <span class="badge urgent">12</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="platform-management">
+                    <i class="fas fa-cog"></i>
+                    <span>Platform Management</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="user-management">
+                    <i class="fas fa-users"></i>
+                    <span>User Management</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="reports">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Abuse Reports</span>
+                    <span class="badge">3</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="analytics">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Platform Analytics</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="system">
+                    <i class="fas fa-server"></i>
+                    <span>System Monitoring</span>
+                </a></li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="admin-avatar">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div>
+                    <div class="user-name">Admin User</div>
+                    <div class="user-status admin-status">
+                        <i class="fas fa-crown"></i>
+                        Super Admin
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="page-title">Admin Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">15</span>
+                    </div>
+                    <div class="header-user">
+                        <div class="admin-avatar-small">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Overview Section -->
+            <section id="overview" class="content-section active">
+                <div class="stats-grid admin-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2,847</h3>
+                            <p>Total Users</p>
+                        </div>
+                        <div class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+8.2% this month</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>156</h3>
+                            <p>Verified Firms</p>
+                        </div>
+                        <div class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+5 this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>1,234</h3>
+                            <p>Active Cases</p>
+                        </div>
+                        <div class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+12% this month</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>8,965</h3>
+                            <p>Cases Resolved</p>
+                        </div>
+                        <div class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+156 this week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2>Pending Verifications</h2>
+                            <span class="urgent-badge">12 Urgent</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="verification-item urgent">
+                                <div class="firm-info">
+                                    <h4>LegalAid Partners LLC</h4>
+                                    <p>Lagos • Submitted 3 days ago</p>
+                                    <span class="status-tag pending">Awaiting Review</span>
+                                </div>
+                                <div class="verification-actions">
+                                    <button class="btn btn-primary btn-sm">Review</button>
+                                </div>
+                            </div>
+                            <div class="verification-item">
+                                <div class="firm-info">
+                                    <h4>Justice & Associates</h4>
+                                    <p>Abuja • Submitted 1 day ago</p>
+                                    <span class="status-tag pending">Awaiting Review</span>
+                                </div>
+                                <div class="verification-actions">
+                                    <button class="btn btn-primary btn-sm">Review</button>
+                                </div>
+                            </div>
+                            <div class="verification-item">
+                                <div class="firm-info">
+                                    <h4>ProBono Legal Services</h4>
+                                    <p>Kano • Submitted 2 hours ago</p>
+                                    <span class="status-tag pending">Awaiting Review</span>
+                                </div>
+                                <div class="verification-actions">
+                                    <button class="btn btn-primary btn-sm">Review</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2>Platform KPIs</h2>
+                        </div>
+                        <div class="card-content">
+                            <div class="kpi-grid">
+                                <div class="kpi-item">
+                                    <div class="kpi-value">94.2%</div>
+                                    <div class="kpi-label">Case Match Rate</div>
+                                    <div class="kpi-trend positive">+2.1%</div>
+                                </div>
+                                <div class="kpi-item">
+                                    <div class="kpi-value">24h</div>
+                                    <div class="kpi-label">Avg Response Time</div>
+                                    <div class="kpi-trend positive">-3h</div>
+                                </div>
+                                <div class="kpi-item">
+                                    <div class="kpi-value">97.8%</div>
+                                    <div class="kpi-label">User Satisfaction</div>
+                                    <div class="kpi-trend positive">+1.2%</div>
+                                </div>
+                                <div class="kpi-item">
+                                    <div class="kpi-value">89.5%</div>
+                                    <div class="kpi-label">Case Closure Rate</div>
+                                    <div class="kpi-trend positive">+3.1%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2>Recent Activity</h2>
+                        </div>
+                        <div class="card-content">
+                            <div class="activity-feed">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p><strong>Okafor & Associates</strong> was verified and approved</p>
+                                        <span class="activity-time">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user-plus text-primary"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p><strong>45 new users</strong> registered today</p>
+                                        <span class="activity-time">4 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-exclamation-triangle text-warning"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p><strong>3 abuse reports</strong> require review</p>
+                                        <span class="activity-time">6 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-chart-line text-success"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p><strong>Daily case volume</strong> increased by 15%</p>
+                                        <span class="activity-time">1 day ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Firm Verification Section -->
+            <section id="firm-verification" class="content-section">
+                <div class="section-header">
+                    <h2>Law Firm Verification</h2>
+                    <div class="section-filters">
+                        <select class="filter-select">
+                            <option value="all">All Applications</option>
+                            <option value="pending">Pending Review</option>
+                            <option value="under-review">Under Review</option>
+                            <option value="approved">Approved</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                        <select class="filter-select">
+                            <option value="all">All States</option>
+                            <option value="lagos">Lagos</option>
+                            <option value="abuja">Abuja</option>
+                            <option value="kano">Kano</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="verification-queue">
+                    <div class="verification-card urgent">
+                        <div class="verification-header">
+                            <div class="firm-details">
+                                <h3>LegalAid Partners LLC</h3>
+                                <div class="firm-meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</span>
+                                    <span><i class="fas fa-clock"></i> Submitted 3 days ago</span>
+                                    <span><i class="fas fa-id-card"></i> CAC: RC7890123</span>
+                                </div>
+                            </div>
+                            <div class="verification-status">
+                                <span class="status-badge pending">Pending Review</span>
+                                <span class="urgency-indicator urgent">Urgent</span>
+                            </div>
+                        </div>
+                        
+                        <div class="verification-content">
+                            <div class="verification-details">
+                                <div class="detail-group">
+                                    <h4>Contact Information</h4>
+                                    <p><strong>Email:</strong> info@legalaidpartners.ng</p>
+                                    <p><strong>Phone:</strong> +234 802 555 0123</p>
+                                    <p><strong>Address:</strong> Plot 456, Victoria Island, Lagos</p>
+                                </div>
+                                
+                                <div class="detail-group">
+                                    <h4>Practice Areas</h4>
+                                    <div class="practice-tags">
+                                        <span class="practice-tag">Family Law</span>
+                                        <span class="practice-tag">Employment Law</span>
+                                        <span class="practice-tag">Civil Rights</span>
+                                        <span class="practice-tag">Immigration</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-group">
+                                    <h4>Submitted Documents</h4>
+                                    <div class="document-list">
+                                        <div class="document-item">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>CAC Registration Certificate</span>
+                                            <button class="btn btn-outline btn-sm">View</button>
+                                        </div>
+                                        <div class="document-item">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Bar Association Certificate</span>
+                                            <button class="btn btn-outline btn-sm">View</button>
+                                        </div>
+                                        <div class="document-item">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Professional Indemnity Insurance</span>
+                                            <button class="btn btn-outline btn-sm">View</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="verification-actions">
+                                <button class="btn btn-success">
+                                    <i class="fas fa-check"></i>
+                                    Approve Firm
+                                </button>
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-times"></i>
+                                    Reject Application
+                                </button>
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-question-circle"></i>
+                                    Request More Info
+                                </button>
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-eye"></i>
+                                    View Full Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="verification-card">
+                        <div class="verification-header">
+                            <div class="firm-details">
+                                <h3>Justice & Associates</h3>
+                                <div class="firm-meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> Abuja, Nigeria</span>
+                                    <span><i class="fas fa-clock"></i> Submitted 1 day ago</span>
+                                    <span><i class="fas fa-id-card"></i> CAC: RC5674321</span>
+                                </div>
+                            </div>
+                            <div class="verification-status">
+                                <span class="status-badge pending">Pending Review</span>
+                            </div>
+                        </div>
+                        
+                        <div class="verification-content">
+                            <div class="verification-details">
+                                <div class="detail-group">
+                                    <h4>Contact Information</h4>
+                                    <p><strong>Email:</strong> contact@justiceassociates.ng</p>
+                                    <p><strong>Phone:</strong> +234 803 444 5678</p>
+                                    <p><strong>Address:</strong> Suite 12, Central Business District, Abuja</p>
+                                </div>
+                                
+                                <div class="detail-group">
+                                    <h4>Practice Areas</h4>
+                                    <div class="practice-tags">
+                                        <span class="practice-tag">Criminal Law</span>
+                                        <span class="practice-tag">Corporate Law</span>
+                                        <span class="practice-tag">Contract Law</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-group">
+                                    <h4>Submitted Documents</h4>
+                                    <div class="document-list">
+                                        <div class="document-item">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>CAC Registration Certificate</span>
+                                            <button class="btn btn-outline btn-sm">View</button>
+                                        </div>
+                                        <div class="document-item">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Professional Certificates</span>
+                                            <button class="btn btn-outline btn-sm">View</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="verification-actions">
+                                <button class="btn btn-success">
+                                    <i class="fas fa-check"></i>
+                                    Approve Firm
+                                </button>
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-times"></i>
+                                    Reject Application
+                                </button>
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-question-circle"></i>
+                                    Request More Info
+                                </button>
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-eye"></i>
+                                    View Full Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Platform Management Section -->
+            <section id="platform-management" class="content-section">
+                <div class="section-header">
+                    <h2>Platform Management</h2>
+                </div>
+
+                <div class="management-grid">
+                    <div class="management-card">
+                        <div class="card-header">
+                            <h3>Practice Areas</h3>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-plus"></i>
+                                Add New
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <div class="practice-areas-list">
+                                <div class="practice-item">
+                                    <span class="practice-name">Family Law</span>
+                                    <div class="practice-stats">
+                                        <span>342 cases</span>
+                                        <span>•</span>
+                                        <span>23 firms</span>
+                                    </div>
+                                    <div class="practice-actions">
+                                        <button class="btn btn-outline btn-sm">Edit</button>
+                                        <button class="btn btn-danger btn-sm">Remove</button>
+                                    </div>
+                                </div>
+                                <div class="practice-item">
+                                    <span class="practice-name">Employment Law</span>
+                                    <div class="practice-stats">
+                                        <span>456 cases</span>
+                                        <span>•</span>
+                                        <span>31 firms</span>
+                                    </div>
+                                    <div class="practice-actions">
+                                        <button class="btn btn-outline btn-sm">Edit</button>
+                                        <button class="btn btn-danger btn-sm">Remove</button>
+                                    </div>
+                                </div>
+                                <div class="practice-item">
+                                    <span class="practice-name">Criminal Law</span>
+                                    <div class="practice-stats">
+                                        <span>234 cases</span>
+                                        <span>•</span>
+                                        <span>18 firms</span>
+                                    </div>
+                                    <div class="practice-actions">
+                                        <button class="btn btn-outline btn-sm">Edit</button>
+                                        <button class="btn btn-danger btn-sm">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="management-card">
+                        <div class="card-header">
+                            <h3>State Coverage</h3>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-plus"></i>
+                                Add State
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <div class="states-grid">
+                                <div class="state-item">
+                                    <div class="state-info">
+                                        <h4>Lagos</h4>
+                                        <div class="state-stats">
+                                            <span>45 firms</span>
+                                            <span>•</span>
+                                            <span>1,234 cases</span>
+                                        </div>
+                                    </div>
+                                    <div class="state-actions">
+                                        <button class="btn btn-outline btn-sm">Manage</button>
+                                    </div>
+                                </div>
+                                <div class="state-item">
+                                    <div class="state-info">
+                                        <h4>Abuja (FCT)</h4>
+                                        <div class="state-stats">
+                                            <span>28 firms</span>
+                                            <span>•</span>
+                                            <span>687 cases</span>
+                                        </div>
+                                    </div>
+                                    <div class="state-actions">
+                                        <button class="btn btn-outline btn-sm">Manage</button>
+                                    </div>
+                                </div>
+                                <div class="state-item">
+                                    <div class="state-info">
+                                        <h4>Kano</h4>
+                                        <div class="state-stats">
+                                            <span>15 firms</span>
+                                            <span>•</span>
+                                            <span>298 cases</span>
+                                        </div>
+                                    </div>
+                                    <div class="state-actions">
+                                        <button class="btn btn-outline btn-sm">Manage</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="management-card">
+                        <div class="card-header">
+                            <h3>Platform Settings</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="settings-list">
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Case Matching Algorithm</h4>
+                                        <p>Configure how cases are matched with law firms</p>
+                                    </div>
+                                    <button class="btn btn-outline btn-sm">Configure</button>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Notification Settings</h4>
+                                        <p>Manage platform-wide notification preferences</p>
+                                    </div>
+                                    <button class="btn btn-outline btn-sm">Configure</button>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Verification Requirements</h4>
+                                        <p>Set requirements for law firm verification</p>
+                                    </div>
+                                    <button class="btn btn-outline btn-sm">Configure</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Management Section -->
+            <section id="user-management" class="content-section">
+                <div class="section-header">
+                    <h2>User Management</h2>
+                    <div class="section-filters">
+                        <input type="text" class="search-input" placeholder="Search users...">
+                        <select class="filter-select">
+                            <option value="all">All Users</option>
+                            <option value="seekers">Legal Aid Seekers</option>
+                            <option value="firms">Law Firms</option>
+                            <option value="suspended">Suspended</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="users-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Type</th>
+                                <th>Location</th>
+                                <th>Joined</th>
+                                <th>Status</th>
+                                <th>Cases/Activity</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face" alt="User">
+                                        <div>
+                                            <h4>Chidi Okwu</h4>
+                                            <span>chidi.okwu@email.com</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="user-type seeker">Legal Aid Seeker</span></td>
+                                <td>Lagos</td>
+                                <td>Sep 15, 2025</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>10 cases submitted</td>
+                                <td>
+                                    <button class="btn btn-outline btn-sm">View</button>
+                                    <button class="btn btn-warning btn-sm">Suspend</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <div class="firm-avatar-table">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Okafor & Associates</h4>
+                                            <span>info@okaforassociates.ng</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="user-type firm">Law Firm</span></td>
+                                <td>Lagos</td>
+                                <td>Aug 22, 2025</td>
+                                <td><span class="status-badge verified">Verified</span></td>
+                                <td>85 cases handled</td>
+                                <td>
+                                    <button class="btn btn-outline btn-sm">View</button>
+                                    <button class="btn btn-warning btn-sm">Suspend</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info">
+                                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b792?w=32&h=32&fit=crop&crop=face" alt="User">
+                                        <div>
+                                            <h4>Kemi Johnson</h4>
+                                            <span>kemi.johnson@email.com</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="user-type seeker">Legal Aid Seeker</span></td>
+                                <td>Abuja</td>
+                                <td>Oct 1, 2025</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>3 cases submitted</td>
+                                <td>
+                                    <button class="btn btn-outline btn-sm">View</button>
+                                    <button class="btn btn-warning btn-sm">Suspend</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Abuse Reports Section -->
+            <section id="reports" class="content-section">
+                <div class="section-header">
+                    <h2>Abuse Reports</h2>
+                    <div class="section-filters">
+                        <select class="filter-select">
+                            <option value="all">All Reports</option>
+                            <option value="pending">Pending Review</option>
+                            <option value="investigating">Under Investigation</option>
+                            <option value="resolved">Resolved</option>
+                        </select>
+                        <select class="filter-select">
+                            <option value="all">All Types</option>
+                            <option value="harassment">Harassment</option>
+                            <option value="fraud">Fraud</option>
+                            <option value="unprofessional">Unprofessional Conduct</option>
+                            <option value="spam">Spam</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="reports-list">
+                    <div class="report-card urgent">
+                        <div class="report-header">
+                            <div class="report-info">
+                                <h3>Harassment Report</h3>
+                                <div class="report-meta">
+                                    <span><i class="fas fa-user"></i> Reported by: Anonymous User</span>
+                                    <span><i class="fas fa-clock"></i> 2 hours ago</span>
+                                    <span><i class="fas fa-exclamation-triangle"></i> High Priority</span>
+                                </div>
+                            </div>
+                            <div class="report-status">
+                                <span class="status-badge pending">Pending Review</span>
+                            </div>
+                        </div>
+                        <div class="report-content">
+                            <div class="report-details">
+                                <p><strong>Reported User:</strong> Johnson Legal Services</p>
+                                <p><strong>Report Type:</strong> Harassment / Unprofessional Conduct</p>
+                                <p><strong>Description:</strong> Law firm lawyer was extremely rude and unprofessional during consultation. Made inappropriate comments and refused to provide proper legal advice.</p>
+                            </div>
+                            <div class="report-actions">
+                                <button class="btn btn-primary">Investigate</button>
+                                <button class="btn btn-warning">Contact Parties</button>
+                                <button class="btn btn-outline">View Full Report</button>
+                                <button class="btn btn-danger">Take Action</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div class="report-header">
+                            <div class="report-info">
+                                <h3>Fraudulent Activity</h3>
+                                <div class="report-meta">
+                                    <span><i class="fas fa-user"></i> Reported by: Adunni Adebayo</span>
+                                    <span><i class="fas fa-clock"></i> 1 day ago</span>
+                                    <span><i class="fas fa-flag"></i> Medium Priority</span>
+                                </div>
+                            </div>
+                            <div class="report-status">
+                                <span class="status-badge investigating">Under Investigation</span>
+                            </div>
+                        </div>
+                        <div class="report-content">
+                            <div class="report-details">
+                                <p><strong>Reported User:</strong> Legal Solutions Inc.</p>
+                                <p><strong>Report Type:</strong> Fraud / Fake Credentials</p>
+                                <p><strong>Description:</strong> Suspect this law firm is using fake credentials. Their CAC registration number doesn't match official records.</p>
+                            </div>
+                            <div class="report-actions">
+                                <button class="btn btn-primary">Continue Investigation</button>
+                                <button class="btn btn-warning">Request Documentation</button>
+                                <button class="btn btn-outline">View Evidence</button>
+                                <button class="btn btn-success">Resolve</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Platform Analytics Section -->
+            <section id="analytics" class="content-section">
+                <div class="section-header">
+                    <h2>Platform Analytics</h2>
+                    <div class="date-range-picker">
+                        <input type="date" value="2025-09-01">
+                        <span>to</span>
+                        <input type="date" value="2025-10-25">
+                        <button class="btn btn-outline btn-sm">Apply</button>
+                    </div>
+                </div>
+
+                <div class="analytics-grid">
+                    <div class="analytics-card full-width">
+                        <div class="card-header">
+                            <h3>Platform Growth Trends</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="chart-placeholder large">
+                                <i class="fas fa-chart-area"></i>
+                                <p>User registrations, case submissions, and firm approvals over time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card">
+                        <div class="card-header">
+                            <h3>Geographic Distribution</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="geographic-stats">
+                                <div class="geo-item">
+                                    <span class="state-name">Lagos</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 45%"></div>
+                                    </div>
+                                    <span class="geo-percentage">45%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="state-name">Abuja</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 22%"></div>
+                                    </div>
+                                    <span class="geo-percentage">22%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="state-name">Kano</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 12%"></div>
+                                    </div>
+                                    <span class="geo-percentage">12%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="state-name">Rivers</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 10%"></div>
+                                    </div>
+                                    <span class="geo-percentage">10%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="state-name">Others</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 11%"></div>
+                                    </div>
+                                    <span class="geo-percentage">11%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card">
+                        <div class="card-header">
+                            <h3>Case Success Metrics</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="success-metrics">
+                                <div class="metric-item">
+                                    <div class="metric-value">89.5%</div>
+                                    <div class="metric-label">Cases Successfully Matched</div>
+                                    <div class="metric-trend positive">+3.2%</div>
+                                </div>
+                                <div class="metric-item">
+                                    <div class="metric-value">94.2%</div>
+                                    <div class="metric-label">Cases Resolved</div>
+                                    <div class="metric-trend positive">+1.8%</div>
+                                </div>
+                                <div class="metric-item">
+                                    <div class="metric-value">4.8/5</div>
+                                    <div class="metric-label">Average Rating</div>
+                                    <div class="metric-trend positive">+0.2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card">
+                        <div class="card-header">
+                            <h3>Platform Usage</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="usage-stats">
+                                <div class="usage-item">
+                                    <div class="usage-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="usage-info">
+                                        <h4>Daily Active Users</h4>
+                                        <span>1,234</span>
+                                    </div>
+                                </div>
+                                <div class="usage-item">
+                                    <div class="usage-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="usage-info">
+                                        <h4>Cases Submitted Today</h4>
+                                        <span>67</span>
+                                    </div>
+                                </div>
+                                <div class="usage-item">
+                                    <div class="usage-icon">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <div class="usage-info">
+                                        <h4>Messages Exchanged</h4>
+                                        <span>892</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- System Monitoring Section -->
+            <section id="system" class="content-section">
+                <div class="section-header">
+                    <h2>System Monitoring</h2>
+                    <div class="system-status">
+                        <span class="status-indicator online"></span>
+                        <span>All Systems Operational</span>
+                    </div>
+                </div>
+
+                <div class="monitoring-grid">
+                    <div class="monitoring-card">
+                        <div class="card-header">
+                            <h3>Server Health</h3>
+                            <span class="health-status healthy">Healthy</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="health-metrics">
+                                <div class="health-metric">
+                                    <span class="metric-label">CPU Usage</span>
+                                    <div class="metric-bar">
+                                        <div class="metric-fill" style="width: 35%"></div>
+                                    </div>
+                                    <span class="metric-value">35%</span>
+                                </div>
+                                <div class="health-metric">
+                                    <span class="metric-label">Memory Usage</span>
+                                    <div class="metric-bar">
+                                        <div class="metric-fill" style="width: 62%"></div>
+                                    </div>
+                                    <span class="metric-value">62%</span>
+                                </div>
+                                <div class="health-metric">
+                                    <span class="metric-label">Disk Usage</span>
+                                    <div class="metric-bar">
+                                        <div class="metric-fill" style="width: 45%"></div>
+                                    </div>
+                                    <span class="metric-value">45%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="monitoring-card">
+                        <div class="card-header">
+                            <h3>API Performance</h3>
+                            <span class="health-status healthy">Optimal</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="api-metrics">
+                                <div class="api-metric">
+                                    <h4>Average Response Time</h4>
+                                    <span class="metric-value">245ms</span>
+                                </div>
+                                <div class="api-metric">
+                                    <h4>Requests per Minute</h4>
+                                    <span class="metric-value">1,234</span>
+                                </div>
+                                <div class="api-metric">
+                                    <h4>Error Rate</h4>
+                                    <span class="metric-value">0.02%</span>
+                                </div>
+                                <div class="api-metric">
+                                    <h4>Uptime</h4>
+                                    <span class="metric-value">99.9%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="monitoring-card">
+                        <div class="card-header">
+                            <h3>Database Status</h3>
+                            <span class="health-status healthy">Operational</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="db-metrics">
+                                <div class="db-metric">
+                                    <span class="metric-label">Connection Pool</span>
+                                    <span class="metric-value">85% utilized</span>
+                                </div>
+                                <div class="db-metric">
+                                    <span class="metric-label">Query Performance</span>
+                                    <span class="metric-value">Fast (avg 12ms)</span>
+                                </div>
+                                <div class="db-metric">
+                                    <span class="metric-label">Active Connections</span>
+                                    <span class="metric-value">234 / 500</span>
+                                </div>
+                                <div class="db-metric">
+                                    <span class="metric-label">Backup Status</span>
+                                    <span class="metric-value">Last: 2 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="monitoring-card">
+                        <div class="card-header">
+                            <h3>Recent System Events</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="system-events">
+                                <div class="event-item info">
+                                    <div class="event-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="event-content">
+                                        <p>Database backup completed successfully</p>
+                                        <span class="event-time">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="event-item success">
+                                    <div class="event-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="event-content">
+                                        <p>System update deployed without issues</p>
+                                        <span class="event-time">6 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="event-item warning">
+                                    <div class="event-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <div class="event-content">
+                                        <p>High memory usage detected on server-2</p>
+                                        <span class="event-time">1 day ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="scripts/admin-dashboard.js"></script>
+</body>
+</html>

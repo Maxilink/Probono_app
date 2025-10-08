@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probono Desk - Platform Test</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .test-card {
+            padding: 1.5rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.75rem;
+            text-align: center;
+            transition: all 0.2s ease-in-out;
+        }
+        .test-card:hover {
+            border-color: #2563eb;
+            background-color: #dbeafe;
+        }
+        .test-card i {
+            font-size: 2rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+        .test-card h3 {
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+        .test-card p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+        .test-btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .test-btn:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem;">
+                <i class="fas fa-balance-scale" style="font-size: 2rem; color: #2563eb;"></i>
+                <h1 style="color: #1f2937; margin: 0;">Probono Desk</h1>
+            </div>
+            <p style="color: #6b7280; font-size: 1.125rem;">Platform Testing & Navigation</p>
+        </div>
+
+        <div class="test-grid">
+            <div class="test-card">
+                <i class="fas fa-home"></i>
+                <h3>Public Website</h3>
+                <p>View the main landing page with hero section, features, and testimonials</p>
+                <button class="test-btn" onclick="window.location.href='index.html'">
+                    Visit Homepage
+                </button>
+            </div>
+
+            <div class="test-card">
+                <i class="fas fa-sign-in-alt"></i>
+                <h3>Authentication</h3>
+                <p>Test user and law firm registration/login flows</p>
+                <button class="test-btn" onclick="window.location.href='auth.html'">
+                    Sign In / Sign Up
+                </button>
+            </div>
+
+            <div class="test-card">
+                <i class="fas fa-user"></i>
+                <h3>User Dashboard</h3>
+                <p>Submit cases, track progress, message lawyers</p>
+                <button class="test-btn" onclick="window.location.href='user-dashboard.html'">
+                    User Dashboard
+                </button>
+            </div>
+
+            <div class="test-card">
+                <i class="fas fa-building"></i>
+                <h3>Law Firm Dashboard</h3>
+                <p>Manage case requests, track metrics, communicate with clients</p>
+                <button class="test-btn" onclick="window.location.href='firm-dashboard.html'">
+                    Firm Dashboard
+                </button>
+            </div>
+
+            <div class="test-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Admin Dashboard</h3>
+                <p>Verify firms, manage platform, monitor system health</p>
+                <button class="test-btn" onclick="window.location.href='admin-dashboard.html'">
+                    Admin Dashboard
+                </button>
+            </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1.5rem; background-color: #f9fafb; border-radius: 0.75rem;">
+            <h3 style="color: #1f2937; margin-bottom: 1rem;">
+                <i class="fas fa-info-circle" style="color: #2563eb; margin-right: 0.5rem;"></i>
+                Test Accounts (Development)
+            </h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.875rem;">
+                <div>
+                    <strong>User Account:</strong><br>
+                    Email: user@test.com<br>
+                    Password: password123
+                </div>
+                <div>
+                    <strong>Law Firm:</strong><br>
+                    Email: firm@test.com<br>
+                    Password: password123
+                </div>
+                <div>
+                    <strong>Admin:</strong><br>
+                    Email: admin@test.com<br>
+                    Password: admin123
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0f9ff; border: 1px solid #0ea5e9; border-radius: 0.75rem;">
+            <h3 style="color: #0c4a6e; margin-bottom: 1rem;">
+                <i class="fas fa-check-circle" style="color: #0ea5e9; margin-right: 0.5rem;"></i>
+                Platform Features Implemented
+            </h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; font-size: 0.875rem;">
+                <div>✅ Public landing page</div>
+                <div>✅ User authentication</div>
+                <div>✅ Case submission system</div>
+                <div>✅ Real-time messaging</div>
+                <div>✅ Law firm verification</div>
+                <div>✅ Admin panel</div>
+                <div>✅ Case tracking</div>
+                <div>✅ Analytics dashboard</div>
+                <div>✅ File upload system</div>
+                <div>✅ Responsive design</div>
+                <div>✅ Nigerian localization</div>
+                <div>✅ Professional UI/UX</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

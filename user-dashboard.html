@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Probono Desk</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fas fa-balance-scale"></i>
+                <span>Probono Desk</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" class="nav-item active" data-section="overview">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Overview</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="submit-case">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Submit New Case</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="my-cases">
+                    <i class="fas fa-folder-open"></i>
+                    <span>My Cases</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="law-firms">
+                    <i class="fas fa-building"></i>
+                    <span>Law Firms</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="messages">
+                    <i class="fas fa-comments"></i>
+                    <span>Messages</span>
+                    <span class="badge">3</span>
+                </a></li>
+                <li><a href="#" class="nav-item" data-section="profile">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="User Avatar">
+                <div>
+                    <div class="user-name">Chidi Okwu</div>
+                    <div class="user-status">Legal Aid Seeker</div>
+                </div>
+            </div>
+            <a href="index.html" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="page-title">Dashboard Overview</h1>
+                </div>
+                <div class="header-right">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">5</span>
+                    </div>
+                    <div class="header-user">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="User">
+                        <span>Chidi Okwu</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Overview Section -->
+            <section id="overview" class="content-section active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>3</h3>
+                            <p>Active Cases</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>7</h3>
+                            <p>Completed Cases</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2</h3>
+                            <p>Pending Responses</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>12</h3>
+                            <p>Unread Messages</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2>Recent Cases</h2>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="card-content">
+                            <div class="case-item">
+                                <div class="case-info">
+                                    <h4>Employment Dispute - Wrongful Termination</h4>
+                                    <p>Submitted 3 days ago</p>
+                                </div>
+                                <div class="case-status status-in-progress">
+                                    In Progress
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <div class="case-info">
+                                    <h4>Landlord-Tenant Issue - Rent Dispute</h4>
+                                    <p>Submitted 1 week ago</p>
+                                </div>
+                                <div class="case-status status-accepted">
+                                    Accepted
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <div class="case-info">
+                                    <h4>Family Law - Child Support</h4>
+                                    <p>Submitted 2 weeks ago</p>
+                                </div>
+                                <div class="case-status status-closed">
+                                    Closed
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2>Quick Actions</h2>
+                        </div>
+                        <div class="card-content">
+                            <div class="quick-actions">
+                                <button class="quick-action-btn" data-action="submit-case">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Submit New Case</span>
+                                </button>
+                                <button class="quick-action-btn" data-action="messages">
+                                    <i class="fas fa-comments"></i>
+                                    <span>Check Messages</span>
+                                </button>
+                                <button class="quick-action-btn" data-action="law-firms">
+                                    <i class="fas fa-building"></i>
+                                    <span>Browse Law Firms</span>
+                                </button>
+                                <button class="quick-action-btn" data-action="profile">
+                                    <i class="fas fa-user-edit"></i>
+                                    <span>Update Profile</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Submit Case Section -->
+            <section id="submit-case" class="content-section">
+                <div class="section-header">
+                    <h2>Submit New Legal Case</h2>
+                    <p>Provide details about your legal issue to get matched with qualified law firms</p>
+                </div>
+
+                <form class="case-form">
+                    <div class="form-step active" data-step="1">
+                        <h3>Case Details</h3>
+                        
+                        <div class="form-group">
+                            <label for="case-title">Case Title</label>
+                            <input type="text" id="case-title" name="title" placeholder="Brief description of your legal issue" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="case-category">Legal Category</label>
+                                <select id="case-category" name="category" required>
+                                    <option value="">Select category</option>
+                                    <option value="family-law">Family Law</option>
+                                    <option value="employment-law">Employment Law</option>
+                                    <option value="criminal-law">Criminal Law</option>
+                                    <option value="civil-rights">Civil Rights</option>
+                                    <option value="immigration">Immigration</option>
+                                    <option value="landlord-tenant">Landlord-Tenant</option>
+                                    <option value="contract-law">Contract Law</option>
+                                    <option value="consumer-protection">Consumer Protection</option>
+                                    <option value="debt-collection">Debt Collection</option>
+                                    <option value="personal-injury">Personal Injury</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="case-state">State</label>
+                                <select id="case-state" name="state" required>
+                                    <option value="">Select state</option>
+                                    <option value="lagos">Lagos</option>
+                                    <option value="abuja">Abuja (FCT)</option>
+                                    <option value="kano">Kano</option>
+                                    <option value="rivers">Rivers</option>
+                                    <option value="oyo">Oyo</option>
+                                    <option value="kaduna">Kaduna</option>
+                                    <option value="anambra">Anambra</option>
+                                    <option value="imo">Imo</option>
+                                    <option value="enugu">Enugu</option>
+                                    <option value="edo">Edo</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="case-description">Detailed Description</label>
+                            <textarea id="case-description" name="description" rows="6" placeholder="Please provide a detailed description of your legal issue, including relevant dates, parties involved, and any actions already taken..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="case-urgency">Urgency Level</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="urgency" value="low">
+                                    <span class="radio-custom"></span>
+                                    Low - No immediate deadline
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="urgency" value="medium">
+                                    <span class="radio-custom"></span>
+                                    Medium - Within 30 days
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="urgency" value="high">
+                                    <span class="radio-custom"></span>
+                                    High - Within 7 days
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="urgency" value="urgent">
+                                    <span class="radio-custom"></span>
+                                    Urgent - Immediate attention needed
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="2">
+                        <h3>Supporting Documents</h3>
+                        <p>Upload any relevant documents that support your case (optional but recommended)</p>
+                        
+                        <div class="file-upload-area">
+                            <input type="file" id="case-documents" name="documents" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                            <label for="case-documents" class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Click to upload files or drag and drop</span>
+                                <small>Supported formats: PDF, DOC, DOCX, JPG, PNG (Max 10MB each)</small>
+                            </label>
+                        </div>
+                        
+                        <div class="uploaded-files"></div>
+                    </div>
+
+                    <div class="form-step" data-step="3">
+                        <h3>Review and Submit</h3>
+                        <div class="case-summary">
+                            <h4>Case Summary</h4>
+                            <div class="summary-item">
+                                <strong>Title:</strong> <span id="summary-title"></span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Category:</strong> <span id="summary-category"></span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>State:</strong> <span id="summary-state"></span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Urgency:</strong> <span id="summary-urgency"></span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Description:</strong> <p id="summary-description"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consent" required>
+                                <span class="checkmark"></span>
+                                I consent to sharing this information with verified law firms for the purpose of receiving legal aid
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" id="prev-step" style="display: none;">Previous</button>
+                        <button type="button" class="btn btn-primary" id="next-step">Next</button>
+                        <button type="submit" class="btn btn-primary" id="submit-case" style="display: none;">Submit Case</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- My Cases Section -->
+            <section id="my-cases" class="content-section">
+                <div class="section-header">
+                    <h2>My Cases</h2>
+                    <div class="section-filters">
+                        <select class="filter-select">
+                            <option value="all">All Cases</option>
+                            <option value="submitted">Submitted</option>
+                            <option value="accepted">Accepted</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="closed">Closed</option>
+                        </select>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-filter"></i>
+                            Filter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <div class="case-card-header">
+                            <h3>Employment Dispute - Wrongful Termination</h3>
+                            <div class="case-status status-in-progress">In Progress</div>
+                        </div>
+                        <div class="case-card-content">
+                            <p><strong>Category:</strong> Employment Law</p>
+                            <p><strong>State:</strong> Lagos</p>
+                            <p><strong>Assigned Firm:</strong> Okafor & Associates</p>
+                            <p><strong>Submitted:</strong> October 20, 2025</p>
+                            <p><strong>Last Update:</strong> Case review in progress, lawyer assigned</p>
+                        </div>
+                        <div class="case-card-actions">
+                            <button class="btn btn-outline btn-sm">View Details</button>
+                            <button class="btn btn-primary btn-sm">Message Lawyer</button>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-card-header">
+                            <h3>Landlord-Tenant Issue - Rent Dispute</h3>
+                            <div class="case-status status-accepted">Accepted</div>
+                        </div>
+                        <div class="case-card-content">
+                            <p><strong>Category:</strong> Landlord-Tenant</p>
+                            <p><strong>State:</strong> Abuja</p>
+                            <p><strong>Assigned Firm:</strong> LegalAid Pro</p>
+                            <p><strong>Submitted:</strong> October 15, 2025</p>
+                            <p><strong>Last Update:</strong> Case accepted, initial consultation scheduled</p>
+                        </div>
+                        <div class="case-card-actions">
+                            <button class="btn btn-outline btn-sm">View Details</button>
+                            <button class="btn btn-primary btn-sm">Message Lawyer</button>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-card-header">
+                            <h3>Family Law - Child Support</h3>
+                            <div class="case-status status-closed">Closed</div>
+                        </div>
+                        <div class="case-card-content">
+                            <p><strong>Category:</strong> Family Law</p>
+                            <p><strong>State:</strong> Rivers</p>
+                            <p><strong>Assigned Firm:</strong> Justice Partners</p>
+                            <p><strong>Submitted:</strong> September 28, 2025</p>
+                            <p><strong>Last Update:</strong> Case successfully resolved</p>
+                        </div>
+                        <div class="case-card-actions">
+                            <button class="btn btn-outline btn-sm">View Details</button>
+                            <button class="btn btn-secondary btn-sm">Rate Experience</button>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-card-header">
+                            <h3>Consumer Protection - Defective Product</h3>
+                            <div class="case-status status-submitted">Submitted</div>
+                        </div>
+                        <div class="case-card-content">
+                            <p><strong>Category:</strong> Consumer Protection</p>
+                            <p><strong>State:</strong> Lagos</p>
+                            <p><strong>Assigned Firm:</strong> Pending</p>
+                            <p><strong>Submitted:</strong> October 25, 2025</p>
+                            <p><strong>Last Update:</strong> Awaiting law firm response</p>
+                        </div>
+                        <div class="case-card-actions">
+                            <button class="btn btn-outline btn-sm">View Details</button>
+                            <button class="btn btn-outline btn-sm">Edit Case</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Law Firms Section -->
+            <section id="law-firms" class="content-section">
+                <div class="section-header">
+                    <h2>Verified Law Firms</h2>
+                    <div class="section-filters">
+                        <select class="filter-select">
+                            <option value="all">All States</option>
+                            <option value="lagos">Lagos</option>
+                            <option value="abuja">Abuja</option>
+                            <option value="kano">Kano</option>
+                            <option value="rivers">Rivers</option>
+                        </select>
+                        <select class="filter-select">
+                            <option value="all">All Practice Areas</option>
+                            <option value="family-law">Family Law</option>
+                            <option value="employment-law">Employment Law</option>
+                            <option value="criminal-law">Criminal Law</option>
+                            <option value="civil-rights">Civil Rights</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="firms-grid">
+                    <div class="firm-card">
+                        <div class="firm-header">
+                            <div class="firm-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="firm-info">
+                                <h3>Okafor & Associates</h3>
+                                <p>Lagos, Nigeria</p>
+                                <div class="firm-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>4.9 (47 reviews)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="firm-content">
+                            <div class="practice-areas">
+                                <span class="practice-tag">Employment Law</span>
+                                <span class="practice-tag">Civil Rights</span>
+                                <span class="practice-tag">Contract Law</span>
+                            </div>
+                            <p class="firm-description">
+                                Experienced law firm specializing in employment disputes and civil rights cases. Over 15 years of experience serving the Lagos community.
+                            </p>
+                            <div class="firm-stats">
+                                <div class="stat">
+                                    <span class="stat-number">85</span>
+                                    <span class="stat-label">Cases Handled</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">95%</span>
+                                    <span class="stat-label">Success Rate</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">24h</span>
+                                    <span class="stat-label">Avg Response</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="firm-actions">
+                            <button class="btn btn-outline btn-sm">View Profile</button>
+                            <button class="btn btn-primary btn-sm">Contact Firm</button>
+                        </div>
+                    </div>
+
+                    <div class="firm-card">
+                        <div class="firm-header">
+                            <div class="firm-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="firm-info">
+                                <h3>LegalAid Pro</h3>
+                                <p>Abuja, Nigeria</p>
+                                <div class="firm-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span>4.6 (32 reviews)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="firm-content">
+                            <div class="practice-areas">
+                                <span class="practice-tag">Family Law</span>
+                                <span class="practice-tag">Landlord-Tenant</span>
+                                <span class="practice-tag">Immigration</span>
+                            </div>
+                            <p class="firm-description">
+                                Dedicated to providing quality legal aid services with a focus on family law and housing rights. Committed to social justice.
+                            </p>
+                            <div class="firm-stats">
+                                <div class="stat">
+                                    <span class="stat-number">62</span>
+                                    <span class="stat-label">Cases Handled</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">88%</span>
+                                    <span class="stat-label">Success Rate</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">36h</span>
+                                    <span class="stat-label">Avg Response</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="firm-actions">
+                            <button class="btn btn-outline btn-sm">View Profile</button>
+                            <button class="btn btn-primary btn-sm">Contact Firm</button>
+                        </div>
+                    </div>
+
+                    <div class="firm-card">
+                        <div class="firm-header">
+                            <div class="firm-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="firm-info">
+                                <h3>Justice Partners</h3>
+                                <p>Rivers, Nigeria</p>
+                                <div class="firm-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>5.0 (28 reviews)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="firm-content">
+                            <div class="practice-areas">
+                                <span class="practice-tag">Criminal Law</span>
+                                <span class="practice-tag">Family Law</span>
+                                <span class="practice-tag">Personal Injury</span>
+                            </div>
+                            <p class="firm-description">
+                                Highly rated firm with expertise in criminal defense and personal injury cases. Known for thorough case preparation and client advocacy.
+                            </p>
+                            <div class="firm-stats">
+                                <div class="stat">
+                                    <span class="stat-number">41</span>
+                                    <span class="stat-label">Cases Handled</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">92%</span>
+                                    <span class="stat-label">Success Rate</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">18h</span>
+                                    <span class="stat-label">Avg Response</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="firm-actions">
+                            <button class="btn btn-outline btn-sm">View Profile</button>
+                            <button class="btn btn-primary btn-sm">Contact Firm</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Messages Section -->
+            <section id="messages" class="content-section">
+                <div class="messages-container">
+                    <div class="messages-sidebar">
+                        <div class="messages-header">
+                            <h3>Conversations</h3>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-plus"></i>
+                                New Message
+                            </button>
+                        </div>
+                        <div class="conversations-list">
+                            <div class="conversation-item active">
+                                <div class="conversation-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="conversation-info">
+                                    <h4>Barr. Emeka Okafor</h4>
+                                    <p>Employment Dispute Case</p>
+                                    <span class="message-time">2 hours ago</span>
+                                </div>
+                                <div class="unread-count">2</div>
+                            </div>
+                            
+                            <div class="conversation-item">
+                                <div class="conversation-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="conversation-info">
+                                    <h4>LegalAid Pro</h4>
+                                    <p>Rent Dispute Case</p>
+                                    <span class="message-time">1 day ago</span>
+                                </div>
+                                <div class="unread-count">1</div>
+                            </div>
+                            
+                            <div class="conversation-item">
+                                <div class="conversation-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="conversation-info">
+                                    <h4>Justice Partners</h4>
+                                    <p>Family Law Case</p>
+                                    <span class="message-time">3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <div class="chat-user-info">
+                                <div class="chat-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h3>Barr. Emeka Okafor</h3>
+                                    <span>Okafor & Associates • Online</span>
+                                </div>
+                            </div>
+                            <div class="chat-actions">
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-video"></i>
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-phone"></i>
+                                </button>
+                                <button class="btn btn-outline btn-sm">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-messages">
+                            <div class="message-date">Today</div>
+                            
+                            <div class="message received">
+                                <div class="message-content">
+                                    <p>Good morning Chidi. I've reviewed your employment termination case and would like to schedule a consultation to discuss the details further.</p>
+                                    <span class="message-time">10:30 AM</span>
+                                </div>
+                            </div>
+                            
+                            <div class="message received">
+                                <div class="message-content">
+                                    <p>Based on the documents you provided, it appears you may have grounds for a wrongful termination claim. When would be a good time for you to discuss this?</p>
+                                    <span class="message-time">10:32 AM</span>
+                                </div>
+                            </div>
+                            
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <p>Thank you for reviewing my case, Barr. Okafor. I'm available for consultation anytime this week. What documents would you need me to prepare?</p>
+                                    <span class="message-time">11:15 AM</span>
+                                </div>
+                            </div>
+                            
+                            <div class="message received">
+                                <div class="message-content">
+                                    <p>Perfect! Please prepare your employment contract, any written communications regarding the termination, and your performance reviews from the past year.</p>
+                                    <span class="message-time">2:45 PM</span>
+                                </div>
+                            </div>
+                            
+                            <div class="message received">
+                                <div class="message-content">
+                                    <p>I can schedule our consultation for tomorrow at 2 PM. Does that work for you?</p>
+                                    <span class="message-time">2:46 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-input">
+                            <button class="attachment-btn">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <input type="text" placeholder="Type your message..." class="message-input">
+                            <button class="send-btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profile" class="content-section">
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face" alt="Profile Picture">
+                            <button class="avatar-edit">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <div class="profile-info">
+                            <h2>Chidi Okwu</h2>
+                            <p>Legal Aid Seeker</p>
+                            <p>Member since September 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-content">
+                        <div class="profile-section">
+                            <h3>Personal Information</h3>
+                            <form class="profile-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="profile-firstname">First Name</label>
+                                        <input type="text" id="profile-firstname" value="Chidi">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profile-lastname">Last Name</label>
+                                        <input type="text" id="profile-lastname" value="Okwu">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="profile-email">Email Address</label>
+                                        <input type="email" id="profile-email" value="chidi.okwu@email.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profile-phone">Phone Number</label>
+                                        <input type="tel" id="profile-phone" value="+234 803 123 4567">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="profile-state">State of Residence</label>
+                                    <select id="profile-state">
+                                        <option value="lagos" selected>Lagos</option>
+                                        <option value="abuja">Abuja (FCT)</option>
+                                        <option value="kano">Kano</option>
+                                        <option value="rivers">Rivers</option>
+                                    </select>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Update Profile</button>
+                            </form>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h3>Account Statistics</h3>
+                            <div class="stats-grid">
+                                <div class="profile-stat">
+                                    <div class="stat-value">10</div>
+                                    <div class="stat-label">Total Cases Submitted</div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="stat-value">7</div>
+                                    <div class="stat-label">Cases Resolved</div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="stat-value">4.8</div>
+                                    <div class="stat-label">Average Rating</div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="stat-value">2 days</div>
+                                    <div class="stat-label">Avg Response Time</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h3>Notification Preferences</h3>
+                            <div class="notification-settings">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    Email notifications for case updates
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    SMS notifications for urgent matters
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Marketing emails about new features
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    Push notifications for messages
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h3>Security Settings</h3>
+                            <div class="security-actions">
+                                <button class="btn btn-outline">Change Password</button>
+                                <button class="btn btn-outline">Enable Two-Factor Authentication</button>
+                                <button class="btn btn-outline">Download My Data</button>
+                                <button class="btn btn-danger">Delete Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="scripts/user-dashboard.js"></script>
+</body>
+</html>
